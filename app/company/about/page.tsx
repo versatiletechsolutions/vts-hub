@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="page-enter mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
+    <section className="page-enter site-shell py-20 sm:py-28">
       <p className="text-[11px] font-medium tracking-[0.14em] text-cyan-300/80 uppercase">Company · About VTS</p>
       <h1 className="type-display mt-5 max-w-2xl text-balance text-white">Technology that helps people do more.</h1>
       <p className="type-body mt-6 max-w-2xl text-zinc-400">Versatile Tech Solutions creates practical tools and digital products to make challenging tasks easier and useful capabilities more accessible.</p>
@@ -22,7 +22,7 @@ export default function AboutPage() {
           <p>We start with what people need to accomplish. A product should address a meaningful problem, be clear to use, and offer practical value in everyday life or work.</p>
           <p>Our work can span different industries and technologies. The common thread is usefulness: helping people learn, work, create, and solve problems with less friction and more possibility.</p>
           <p>Our first solutions are in development. As they become available, we&apos;ll share who they&apos;re for, how they work, and the problems they help address.</p>
-          <Link href="/#whats-coming" className="inline-flex items-center gap-2 rounded-md py-1 text-[13px] font-normal text-cyan-200 transition-colors hover:text-white">Explore What&apos;s Coming <ArrowRightIcon className="size-4" aria-hidden="true" /></Link>
+          <Link href="/products" className="inline-flex items-center gap-2 rounded-md py-1 text-[13px] font-normal text-cyan-200 transition-colors hover:text-white">Explore What&apos;s Coming <ArrowRightIcon className="size-4" aria-hidden="true" /></Link>
         </div>
       </div>
     </section>

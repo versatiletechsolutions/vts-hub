@@ -10,15 +10,14 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/8">
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-12 text-[13px] sm:grid-cols-2 sm:px-8 lg:grid-cols-[1.3fr_0.6fr_1fr]">
+    <footer className="site-footer relative bg-black">
+      <div className="site-shell grid gap-10 py-12 text-sm sm:grid-cols-2 lg:grid-cols-[1.3fr_0.6fr_1fr]">
         <div>
-          <Link href="/" aria-label="VTS home" className="inline-flex items-center gap-3 rounded-md">
-            <Image src="/logo.svg" alt="" width={27} height={36} className="h-9 w-auto" />
-            <span className="text-xl font-normal tracking-[-0.04em] text-zinc-100">VTS</span>
+          <Link href="/" aria-label="Versatile Tech Solutions home" className="inline-flex max-w-full items-center gap-3 rounded-lg">
+            <Image src="/VTS_Logo_Precision_Vector.svg" unoptimized alt="" width={1254} height={1254} sizes="64px" className="size-16 shrink-0 rounded-lg object-contain" />
+            <span className="text-base leading-snug tracking-[-0.025em] text-zinc-200 sm:text-lg">{company.name}</span>
           </Link>
-          <p className="mt-4 text-zinc-300">{company.name}</p>
-          <p className="mt-2 text-zinc-500">{company.tagline}</p>
+          <p className="mt-3 text-zinc-500">{company.tagline}</p>
         </div>
         <nav aria-label="Company navigation">
           <p className="mb-4 text-[11px] font-medium tracking-[0.1em] text-zinc-500 uppercase">Company</p>
@@ -33,7 +32,7 @@ export function Footer() {
           <a href={`mailto:${company.email}`} className="rounded-sm leading-7 break-all text-zinc-300 transition-colors hover:text-cyan-200">{company.email}</a>
         </div>
       </div>
-      <div className="mx-auto w-full max-w-7xl border-t border-white/8 px-5 py-5 text-xs leading-6 text-zinc-500 sm:px-8">
+      <div className="site-shell border-t border-white/8 py-5 text-xs leading-6 text-zinc-500">
         © {new Date().getFullYear()} {company.name}. All rights reserved.
       </div>
     </footer>

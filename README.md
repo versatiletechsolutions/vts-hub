@@ -25,7 +25,7 @@ Use availability and CTA wording that accurately reflect the product's status.
 The header has direct Products, Solutions, and About links, with Contact on the
 right. Products and Solutions lead to Coming soon pages (`/products` and
 `/solutions`). The same links stay visible on mobile without dropdowns. The hero
-CTA points to the homepage's `#whats-coming` section.
+CTA points to the Products Coming soon page.
 
 The contact page includes a name, email, and message form. Its Send message
 button intentionally has no action yet, and form submission is prevented.

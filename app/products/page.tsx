@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function ProductsPage() {
-  return <ComingSoon section="Products" description="We're developing practical tools across software, AI & automation, and learning. Our first products are in development. We'll share what they do and how to use them here as they become available." />;
+  return <ComingSoon description="We're developing practical tools across software, AI & automation, and learning. Our first products are in development. We'll share what they do and how to use them here as they become available." />;
 }

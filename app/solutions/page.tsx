@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function SolutionsPage() {
-  return <ComingSoon section="Solutions" description="We're exploring how AI can make complex work easier for people and organizations. Our first solutions are in development. As they become available, we'll explain who they're for, the problems they address, and how they work." />;
+  return <ComingSoon description="We're exploring how AI can make complex work easier for people and organizations. Our first solutions are in development. As they become available, we'll explain who they're for, the problems they address, and how they work." />;
 }

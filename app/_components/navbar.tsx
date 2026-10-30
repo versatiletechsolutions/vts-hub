@@ -10,12 +10,11 @@ const navigation = [
 export function Navbar() {
   return (
     <header className="site-header sticky top-0 z-40 bg-black">
-      <div className="site-shell grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-5 gap-y-3 py-5 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:gap-x-8 lg:py-6">
-        <Link href="/" aria-label="Versatile Tech Solutions home" className="flex min-w-0 items-center gap-2.5 justify-self-start rounded-md sm:gap-3">
-          <Image src="/VTS_Logo_Precision_Vector.svg" unoptimized alt="" width={1254} height={1254} sizes="(min-width: 640px) 48px, 40px" className="size-10 shrink-0 rounded-lg object-contain sm:size-12" />
-          <span className="text-[17px] leading-tight font-normal tracking-[-0.035em] text-zinc-100 sm:text-[22px]">Versatile Tech Solutions</span>
+      <div className="site-shell grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-5 gap-y-3 py-5 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:gap-x-8">
+        <Link href="/" aria-label="Versatile Tech Solutions home" className="flex">
+          <Image src="/vtslogorectangle.png" alt="VTS Logo" width={600} height={400} className="rounded-md object-contain lg:w-70 w-50" />
         </Link>
-
+      
         <nav aria-label="Main navigation" className="col-span-2 row-start-2 justify-self-center lg:col-span-1 lg:col-start-2 lg:row-start-1">
           <ul className="flex items-center gap-7 sm:gap-9">
             {navigation.map((item) => (

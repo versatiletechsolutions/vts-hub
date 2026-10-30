@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   description,
   applicationName: company.name,
-  icons: { icon: "/VTS_Logo_Precision_Vector.svg" },
+  icons: { icon: "/vtslogo.png" },
   openGraph: {
     type: "website",
     siteName: company.name,

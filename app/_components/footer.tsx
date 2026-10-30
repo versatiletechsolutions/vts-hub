@@ -13,9 +13,8 @@ export function Footer() {
     <footer className="site-footer relative bg-black">
       <div className="site-shell grid gap-10 py-12 text-sm sm:grid-cols-2 lg:grid-cols-[1.3fr_0.6fr_1fr]">
         <div>
-          <Link href="/" aria-label="Versatile Tech Solutions home" className="inline-flex max-w-full items-center gap-3 rounded-lg">
-            <Image src="/VTS_Logo_Precision_Vector.svg" unoptimized alt="" width={1254} height={1254} sizes="64px" className="size-16 shrink-0 rounded-lg object-contain" />
-            <span className="text-base leading-snug tracking-[-0.025em] text-zinc-200 sm:text-lg">{company.name}</span>
+          <Link href="/" aria-label="Versatile Tech Solutions home" className="inline-flex">
+            <Image src="/vtslogorectangle.png" unoptimized alt="" width={1254} height={1000} sizes="64px" className="relative top-0 size-62 rounded-lg object-contain" />
           </Link>
           <p className="mt-3 text-zinc-500">{company.tagline}</p>
         </div>

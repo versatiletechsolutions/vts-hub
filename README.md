@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Versatile Tech Solutions
 
-## Getting Started
+VTS's public website, built with Next.js App Router and Tailwind CSS.
 
-First, run the development server:
+## Local development
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the local address printed by Next.js. Run `npm run build` to verify the production build.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Shared company details and the product catalogue live in `lib/site-content.ts`.
+The contact address is `versatiletechsolutions1@gmail.com`.
 
-## Learn More
+The catalogue starts empty. The homepage shows the development message until
+real products are entered; it never displays sample products or an empty grid.
+Each product entry includes its name, identity (initials and optional logo),
+customer problem, primary benefit, explanation, availability, and CTA link.
+Use availability and CTA wording that accurately reflect the product's status.
 
-To learn more about Next.js, take a look at the following resources:
+The header has direct Products, Solutions, and About links, with Contact on the
+right. Products and Solutions lead to Coming soon pages (`/products` and
+`/solutions`). The same links stay visible on mobile without dropdowns. The hero
+CTA points to the homepage's `#whats-coming` section.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The contact page includes a name, email, and message form. Its Send message
+button intentionally has no action yet, and form submission is prevented.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The blog and former placeholder pages have been removed. Exact redirects in
+`next.config.ts` send the former product, learning, and solution URLs to the
+appropriate Coming soon page. Remove a matching redirect before reusing one of
+those URLs for a real product or solution.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Page titles and descriptions use the full company name. The footer's copyright
+year follows the current year at render time.

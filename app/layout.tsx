@@ -19,7 +19,7 @@ const description = "Versatile Tech Solutions (VTS) develops practical tools and
 
 export const metadata: Metadata = {
   title: {
-    default: "Versatile Tech Solutions (VTS) — Expanding what's possible",
+    default: "Versatile Tech Solutions",
     template: "%s | Versatile Tech Solutions",
   },
   description,

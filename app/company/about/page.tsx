@@ -11,13 +11,11 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="page-enter site-shell py-20 sm:py-28">
-      <p className="text-[11px] font-medium tracking-[0.14em] text-cyan-300/80 uppercase">Company · About VTS</p>
-      <h1 className="type-display mt-5 max-w-2xl text-balance text-white">Technology that helps people do more.</h1>
-      <p className="type-body mt-6 max-w-2xl text-zinc-400">Versatile Tech Solutions creates practical tools and digital products to make challenging tasks easier and useful capabilities more accessible.</p>
-      <div className="mt-14 grid gap-8 border-t border-white/10 pt-10 lg:grid-cols-[0.5fr_1fr] lg:gap-16">
-        <h2 className="type-subtitle text-white">Our mission</h2>
-        <div className="max-w-2xl type-body space-y-5 text-zinc-400">
+    <section className="page-enter site-shell py-10">
+      <h1 className="type-display mt-5 max-w-5xl text-balance text-white">Technology that helps people do more.</h1>
+      <div className="mt-14 flex flex-col items-center gap-8 border-t border-white/10 pt-10 px-16 lg:px-30 pb-10">
+        <h2 className="type-subtitle text-white items-start text-4xl">Our mission</h2>
+        <div className="max-w-3xl type-body space-y-5 text-zinc-400 flex flex-col items-center">
           <p className="text-lg leading-8 font-normal tracking-[-0.02em] text-zinc-200">{company.mission}</p>
           <p>We start with what people need to accomplish. A product should address a meaningful problem, be clear to use, and offer practical value in everyday life or work.</p>
           <p>Our work can span different industries and technologies. The common thread is usefulness: helping people learn, work, create, and solve problems with less friction and more possibility.</p>

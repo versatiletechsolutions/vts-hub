@@ -70,9 +70,15 @@
 }
 
 @keyframes background-drift {
-  0% { transform: translate3d(-0.8%, 0, 0) scale(1.07) rotate(-0.3deg); }
-  50% { transform: translate3d(0.6%, 0.8%, 0) scale(1.085) rotate(0.1deg); }
-  100% { transform: translate3d(0.2%, -0.5%, 0) scale(1.075) rotate(0.3deg); }
+  0% { transform: translate3d(-2%, -1%, 0) scale(1.09); }
+  50% { transform: translate3d(1%, 1%, 0) scale(1.12); }
+  100% { transform: translate3d(2%, -1%, 0) scale(1.09); }
+}
+
+@keyframes flow-shift {
+  0% { transform: translate3d(-4%, 2%, 0) rotate(-2deg); opacity: 0.35; }
+  50% { transform: translate3d(2%, -2%, 0) rotate(1deg); opacity: 0.55; }
+  100% { transform: translate3d(5%, 1%, 0) rotate(3deg); opacity: 0.35; }
 }
 
 @layer components {
@@ -110,14 +116,8 @@
 
   .background-artwork {
     position: absolute;
-    inset: 0;
-    transform: scale(1.07);
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .background-artwork {
-      animation: background-drift 32s ease-in-out infinite alternate;
-    }
+    inset: -5%;
+    transform: scale(1.09);
   }
 
   .background-image,
@@ -130,18 +130,17 @@
   }
 
   .background-image {
-    background-image: url("/_next/image?url=%2Fbackgrounds%2Fvts-blue-flow.jpg&w=1920&q=75");
+    background-image: url("/backgrounds/vts-blue-flow.jpg");
     background-size: cover;
     background-position: center;
   }
 
   .background-flow {
-    display: block;
-    opacity: 0;
-  }
-
-  .site-background[data-flow-ready="true"] .background-flow {
-    opacity: 1;
+    background:
+      radial-gradient(ellipse 55% 34% at 35% 73%, rgb(26 148 255 / 28%), transparent 75%),
+      radial-gradient(ellipse 45% 30% at 77% 88%, rgb(32 113 242 / 24%), transparent 75%);
+    mix-blend-mode: screen;
+    opacity: 0.35;
   }
 
   .background-shade {
@@ -150,11 +149,18 @@
       linear-gradient(180deg, rgb(2 6 12 / 18%), rgb(2 6 12 / 32%) 55%, rgb(2 6 12 / 58%));
   }
 
-  @media (max-width: 767px) {
-    .background-image {
-      background-image: url("/_next/image?url=%2Fbackgrounds%2Fvts-blue-flow.jpg&w=1080&q=75");
-      background-position: 38% center;
+  @media (prefers-reduced-motion: no-preference) {
+    .background-artwork {
+      animation: background-drift 24s ease-in-out infinite alternate;
     }
+
+    .background-flow {
+      animation: flow-shift 18s ease-in-out infinite alternate;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .background-image { background-position: 38% center; }
   }
 
   @media (prefers-reduced-motion: reduce) {
